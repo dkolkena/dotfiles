@@ -39,6 +39,7 @@ alias python='python3'
 alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
 alias loadbash='source ~/.bash_profile ~/.bashrc ~/.bash_aliases'
+alias dicker='docker'
 
 alias nao='telnet alt.org' # Nethack Online
 
