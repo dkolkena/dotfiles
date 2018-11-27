@@ -1,0 +1,29 @@
+### $HOME directory gitignore file ###
+
+# Ignore all main directories.
+Applications/
+Desktop/
+Documents/
+Downloads/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
+
+# Additional directories
+Code/
+VirtualBox VMs/
+go/
+
+# MacOS systems files
+.CFUserTextEncoding
+.DS_Store
+.MacOSX/
+.Trash/
+
+# Adding PSK info to source control is bad
+.ssh/id_rsa
+.ssh/id_rsa.pub
+.ssh/known_hosts
+ 
