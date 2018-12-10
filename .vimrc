@@ -26,6 +26,12 @@ set number
 " Enable use of the mouse for all modes
 set mouse=a
 
+" Use Ruby syntax highlighting for Vagrantfiles
+augroup vagrant
+	au!
+	au BufRead,BufNewFile Vagrantfile set filetype=ruby
+augroup END
+ 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
