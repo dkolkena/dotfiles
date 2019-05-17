@@ -43,6 +43,7 @@ alias dicker='docker'
 
 alias nao='telnet alt.org' # Nethack Online
 
+alias glog="git log --color --all --date-order --decorate --dirstat=lines,cumulative --stat | sed 's/\([0-9] file[s]\? .*)$\)/\1\n_______\n-------/g' | less -R"
 
 #-------------------------------------------------------------
 # Tailoring 'less'
@@ -166,6 +167,16 @@ function ii()   # Get current host related info.
     echo -e "${BRed}Local IP Address:$NC " ; my_ip
     echo -e "${BRed}Open connections:$NC "; sudo lsof -PiTCP -sTCP:LISTEN;
     echo
+}
+
+function taocl() 
+{
+    curl -s https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md |
+    sed '/cowsay[.]png/d' |
+    pandoc -f markdown -t html |
+    xmlstarlet fo --html --dropdtd |
+    xmlstarlet sel -t -v "(html/body/ul/li[count(p)>0])[$RANDOM mod last()+1]" |
+    xmlstarlet unesc | fmt -80 | iconv -t US
 }
 
 # #-------------------------------------------------------------
